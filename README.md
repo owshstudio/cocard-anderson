@@ -2,17 +2,42 @@
 
 A redesign concept for [CoCard Anderson](https://encompossolutions.com/) (merchant services + POS, Syracuse NY & Bennington VT), built by [OWSH Studio](https://owshstudio.com).
 
-Static site — no build step. Open `index.html` locally, or it deploys to Vercel as-is.
+**Live:** https://cocard-anderson.vercel.app
+
+Static site — no build step, no dependencies. Open `index.html` locally, or it deploys to Vercel as-is (auto-deploys on push to `main`).
 
 ## Pages
-- `index.html` — Home
-- `cash-discount.html` — Cash Discount program (with live savings calculator)
-- `pos-systems.html` — POS systems (EdgeServ, MobileBytes, Revonu, Clover)
-- `b2bx.html` — B2BX Level 3 processing
-- `breach-insurance.html` — Data breach insurance
-- `childcare.html` — Childcare payments
-- `about.html` — About
+
+| File | Page |
+|------|------|
+| `index.html` | Home |
+| `cash-discount.html` | Cash Discount program (live savings calculator) |
+| `pos-systems.html` | POS systems (EdgeServ, MobileBytes, Revonu, Clover) |
+| `b2bx.html` | B2BX Level 3 processing |
+| `breach-insurance.html` | Data breach insurance |
+| `chargeback-reimbursement.html` | Chargeback reimbursement |
+| `childcare.html` | Childcare payments |
+| `about.html` | About |
+| `404.html` | Not-found page |
 
 All copy is sourced from CoCard Anderson's live site. Content reference lives in `../source/`.
 
-Stack: hand-written HTML + CSS, Sora/Manrope type, LocalBusiness + FAQ JSON-LD, sitemap + robots.
+## Stack & conventions
+
+- Hand-written HTML + a single `css/styles.css`. Fonts: Sora (headings) + Manrope (body).
+- Identity: navy classical-trust + a green "savings" accent.
+- **SEO:** per-page canonical/OG/Twitter/geo meta, `LocalBusiness` + `BreadcrumbList` + `Service` + `FAQPage` JSON-LD, `sitemap.xml`, `robots.txt`, branded 1200x630 `assets/og-default.png`.
+- **Accessibility:** `<main>` + skip link, `:focus-visible`, `prefers-reduced-motion`, ARIA on nav + decorative SVGs, AA-contrast text.
+- **Performance:** lazy-loaded below-fold images, preloaded per-page LCP image, compressed photos.
+- Mobile nav: hamburger-only header with a full-panel menu.
+
+## Config
+
+- `vercel.json` — `cleanUrls: true` (slugs resolve without `.html`).
+- `site.webmanifest` — PWA manifest.
+
+## To do before a real launch
+
+- **Domain:** canonical/OG/sitemap/robots currently point at `cocard-anderson.vercel.app`. Swap to the production domain when chosen (global find/replace).
+- **Photos:** hero/section imagery is licensed stock (Unsplash). Replace with CoCard's real photography.
+- **Contact form:** currently shows a success message client-side only. Wire to Formspree or a real endpoint (fields already have `name` attributes).
