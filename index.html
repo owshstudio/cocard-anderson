@@ -51,6 +51,7 @@
           <li><a href="pos-systems.html">POS Systems</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="index.html#contact">Contact</a></li>
+          <li class="nav-quote-mobile"><a class="btn btn-primary" href="index.html#contact">Get a Quote</a></li>
         </ul>
       </nav>
       <div class="nav-cta">
@@ -351,9 +352,14 @@
   </footer>
 
   <script>
-    document.getElementById('navToggle').addEventListener('click', function () {
-      document.getElementById('navLinks').classList.toggle('open');
-    });
+    (function(){
+      var t=document.getElementById('navToggle'), m=document.getElementById('navLinks');
+      function close(){ m.classList.remove('open'); t.classList.remove('is-open'); t.setAttribute('aria-expanded','false'); }
+      t.addEventListener('click', function(){
+        var open=m.classList.toggle('open'); t.classList.toggle('is-open', open); t.setAttribute('aria-expanded', open);
+      });
+      m.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+    })();
   </script>
 <script type="application/ld+json">
 {

@@ -259,8 +259,29 @@ img { max-width: 100%; display: block; }
   .grid-2, .grid-3, .why-grid, .stat-band, .footer-grid, .form-row { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: 1fr 1fr; }
   .nav-links, .nav-phone { display: none; }
-  .nav-links.open { display: flex; position: absolute; top: 76px; left: 0; right: 0; flex-direction: column; background: #fff; border-bottom: 1px solid var(--line); padding: 18px 24px; gap: 14px; }
   .nav-toggle { display: block; }
+  .nav-cta .btn-nav { display: none; }            /* hamburger-only header on mobile */
+  .nav-links.open {
+    display: flex; flex-direction: column; align-items: stretch;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: #fff; border-top: 1px solid var(--line);
+    box-shadow: 0 18px 34px rgba(13, 34, 60, .14);
+    padding: 6px 22px 22px; gap: 0; margin: 0;
+  }
+  .nav-links.open li { width: 100%; }
+  .nav-links.open li > a:not(.btn) {
+    display: block; padding: 16px 2px; font-size: 1.06rem; font-weight: 600;
+    color: var(--ink); border-bottom: 1px solid var(--line);
+  }
+  .nav-links.open li > a:not(.btn):hover { color: var(--green-600); }
+  .nav-quote-mobile { display: none; }
+  .nav-links.open .nav-quote-mobile { display: block; margin-top: 18px; }
+  .nav-links.open .nav-quote-mobile a.btn { width: 100%; justify-content: center; padding: 15px; }
+  /* hamburger -> X */
+  .nav-toggle span { transition: transform .25s ease, opacity .2s ease; transform-origin: center; }
+  .nav-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle.is-open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .cta { padding: 40px 24px; }
   .why-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -338,7 +359,6 @@ section[id], div[id] { scroll-margin-top: 92px; }
   .brand img { width: 34px; height: 34px; }
   .brand-name { font-size: 1.05rem; }
   .nav { height: 66px; }
-  .nav-links.open { top: 66px; }
   .nav-cta { gap: 10px; }
   .hero { padding: 64px 0 56px; }
   .hero-trust { gap: 18px; }
