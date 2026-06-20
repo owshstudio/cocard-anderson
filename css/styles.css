@@ -372,7 +372,7 @@ section[id], div[id] { scroll-margin-top: 92px; }
 }
 
 /* ===========================================================
-   v2 polish — accessibility
+   v2 polish: accessibility
    =========================================================== */
 :root { --muted: #5f6f86; }            /* darker: meets WCAG AA on white */
 .skip-link {
