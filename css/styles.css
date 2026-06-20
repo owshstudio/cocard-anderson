@@ -370,3 +370,29 @@ section[id], div[id] { scroll-margin-top: 92px; }
   .btn-lg { padding: 14px 20px; font-size: 1rem; }
   .hero-actions .btn { width: 100%; justify-content: center; }
 }
+
+/* ===========================================================
+   v2 polish — accessibility
+   =========================================================== */
+:root { --muted: #5f6f86; }            /* darker: meets WCAG AA on white */
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: var(--navy-800); color: #fff; padding: 11px 18px;
+  border-radius: 0 0 10px 0; font-family: "Sora", sans-serif; font-weight: 600;
+}
+.skip-link:focus { left: 0; }
+:focus-visible { outline: 2px solid var(--green-500); outline-offset: 2px; border-radius: 4px; }
+.btn:focus-visible { outline-offset: 3px; }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible {
+  outline: 2px solid var(--green-500); outline-offset: 1px; border-color: var(--green-500);
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important; animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important; scroll-behavior: auto !important;
+  }
+}
+
+/* nav-quote button belongs only in the mobile menu (fix: was showing on desktop) */
+.nav-quote-mobile { display: none; }

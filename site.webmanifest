@@ -1,0 +1,12 @@
+{
+  "name": "CoCard Anderson",
+  "short_name": "CoCard",
+  "description": "Merchant services and POS for Northeast businesses since 2002.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0e2a47",
+  "icons": [
+    { "src": "/assets/cropped-CCAIcon-270x270.jpg", "sizes": "270x270", "type": "image/jpeg" }
+  ]
+}
