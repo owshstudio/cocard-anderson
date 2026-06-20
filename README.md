@@ -12,14 +12,14 @@ Static site — no build step, no dependencies. Open `index.html` locally, or it
 |------|------|
 | `index.html` | Home |
 | `cash-discount.html` | Cash Discount program (live savings calculator) |
-| `pos-systems.html` | POS systems (EdgeServ, MobileBytes, Bodega AI, iPOS, Clover) |
+| `pos-systems.html` | POS systems (EdgeServ, Genius, Bodega AI, iPOS, Clover) |
 | `b2bx.html` | B2BX Level 3 processing |
 | `breach-insurance.html` | Data breach insurance |
 | `chargeback-reimbursement.html` | Chargeback reimbursement |
 | `about.html` | About |
 | `404.html` | Not-found page |
 
-All copy is sourced from CoCard Anderson's live site, except Bodega AI and iPOS (Dejavoo), which were researched from the vendors' own materials. Content reference lives in `../source/`.
+All copy is sourced from CoCard Anderson's live site, except Genius (Global Payments), Bodega AI, and iPOS (Dejavoo), which were researched from the vendors' own materials. Content reference lives in `../source/`.
 
 ## Stack & conventions
 
