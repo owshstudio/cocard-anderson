@@ -399,3 +399,39 @@ section[id], div[id] { scroll-margin-top: 92px; }
 
 /* Homepage POS teaser: photo tiles fill the box (product renders stay centered) */
 .pos-card .pos-media img.pos-photo { width: 100%; height: 100%; max-height: none; object-fit: cover; }
+
+/* ===========================================================
+   Dropdown nav (added v3)
+   =========================================================== */
+.has-dropdown { position: relative; }
+.nav-top { display: inline-flex; align-items: center; gap: 5px; cursor: pointer; }
+.nav-caret { transition: transform .2s ease; }
+.has-dropdown:hover .nav-caret, .has-dropdown:focus-within .nav-caret { transform: rotate(180deg); }
+.dropdown {
+  position: absolute; top: 100%; left: 0; min-width: 250px;
+  background: #fff; border: 1px solid var(--line); border-radius: 14px;
+  box-shadow: var(--shadow-md); padding: 8px; list-style: none; margin: 10px 0 0;
+  opacity: 0; visibility: hidden; transform: translateY(8px);
+  transition: opacity .16s ease, transform .16s ease, visibility .16s ease; z-index: 60;
+}
+.has-dropdown:hover .dropdown, .has-dropdown:focus-within .dropdown {
+  opacity: 1; visibility: visible; transform: translateY(0);
+}
+.dropdown::before { content: ""; position: absolute; top: -10px; left: 0; right: 0; height: 10px; }
+.dropdown li a { display: block; padding: 10px 13px; border-radius: 9px; font-size: .95rem; font-weight: 600; color: var(--ink); white-space: nowrap; }
+.dropdown li a:hover { background: var(--bg-soft); color: var(--green-600); }
+
+/* Mobile: dropdowns become indented sub-lists inside the open panel */
+@media (max-width: 900px) {
+  .nav-links.open .has-dropdown > .nav-top {
+    display: block; padding: 16px 2px 8px; font-size: 1.06rem; font-weight: 700; color: var(--ink); cursor: default;
+  }
+  .nav-links.open .has-dropdown > .nav-top .nav-caret { display: none; }
+  .nav-links.open .dropdown {
+    position: static; opacity: 1; visibility: visible; transform: none;
+    box-shadow: none; border: 0; border-radius: 0; padding: 0 0 8px; margin: 0; min-width: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-links.open .dropdown li a { padding: 11px 2px 11px 16px; font-size: 1rem; font-weight: 500; border-bottom: 0; }
+  .nav-links.open .dropdown li a:hover { background: transparent; }
+}
