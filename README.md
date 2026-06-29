@@ -12,7 +12,7 @@ Static site — no build step, no dependencies. Open `index.html` locally, or it
 |------|------|
 | `index.html` | Home |
 | `cash-discount.html` | Cash Discount program (live savings calculator) |
-| `pos-systems.html` | POS systems (EdgeServ, Genius, Bodega AI, iPOS, Clover) |
+| `pos-systems.html` | POS, terminals & payments (POS systems, Dejavoo terminals, gateways, mobile) |
 | `b2bx.html` | B2BX Level 3 processing |
 | `breach-insurance.html` | Data breach insurance |
 | `chargeback-reimbursement.html` | Chargeback reimbursement |
