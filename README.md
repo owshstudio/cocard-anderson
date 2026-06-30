@@ -13,6 +13,7 @@ Static site — no build step, no dependencies. Open `index.html` locally, or it
 | `index.html` | Home |
 | `cash-discount.html` | Cash Discount program (live savings calculator) |
 | `pos-systems.html` | POS systems (EdgeServ, Genius, Bodega AI, Clover) |
+| `c-store.html` | C-Store & Liquor Store (Bodega AI) — videos + QR code |
 | `terminals.html` | Card terminals (Dejavoo Z/QD/P series) |
 | `gateways.html` | Virtual terminals & gateways (online layer on CCA's processing) |
 | `mobile-payments.html` | Mobile payments |
