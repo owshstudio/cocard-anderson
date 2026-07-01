@@ -11,4 +11,6 @@
   <url><loc>https://cocard-anderson.vercel.app/gateways</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://cocard-anderson.vercel.app/mobile-payments</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://cocard-anderson.vercel.app/about</loc><lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cocard-anderson.vercel.app/privacy</loc><lastmod>2026-07-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://cocard-anderson.vercel.app/terms</loc><lastmod>2026-07-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
