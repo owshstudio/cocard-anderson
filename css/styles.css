@@ -453,7 +453,7 @@ section[id], div[id] { scroll-margin-top: 92px; }
 .hero-terminal{
   position:relative; overflow:hidden;
   background:linear-gradient(158deg,#12385f 0%, var(--navy-900) 78%);
-  border-radius:26px; padding:36px 34px 32px; color:#fff;
+  border-radius:26px; padding:34px 34px 48px; color:#fff;
   box-shadow:0 34px 70px -24px rgba(10,31,56,.6), 0 10px 26px rgba(10,31,56,.24);
 }
 .hero-terminal::before{
@@ -465,14 +465,14 @@ section[id], div[id] { scroll-margin-top: 92px; }
   width:46px; height:4px; border-radius:99px; background:rgba(255,255,255,.14);
 }
 .hero-terminal > *{ position:relative; }
-.hero-terminal-top{ display:flex; align-items:center; gap:11px; margin:6px 0 30px; }
+.hero-terminal-top{ display:flex; align-items:center; gap:11px; margin:6px 0 20px; }
 .hero-terminal-top span{ font-family:"Sora",sans-serif; font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:#84a7c2; }
 .hero-terminal-label{ font-size:.92rem; color:#9fb1c7; }
 .hero-terminal-old{ font-family:"Sora",sans-serif; font-size:1.5rem; font-weight:600; color:#5f7ea0; text-decoration:line-through; text-decoration-color:rgba(255,255,255,.28); margin-top:5px; }
 .hero-terminal-old span{ font-size:.85rem; }
 .hero-terminal-new{ font-family:"Sora",sans-serif; font-size:4.8rem; font-weight:700; line-height:.92; color:#5fd0b0; margin-top:2px; letter-spacing:-.02em; }
 .hero-terminal-new span{ font-size:1.35rem; font-weight:600; color:#8fdcc6; letter-spacing:0; }
-.hero-terminal-pill{ display:inline-flex; align-items:center; gap:8px; margin-top:26px; padding:8px 15px; border-radius:999px; font-family:"Sora",sans-serif; font-weight:600; font-size:.82rem; color:#bff0de; background:rgba(95,208,176,.13); border:1px solid rgba(95,208,176,.32); }
+.hero-terminal-pill{ display:inline-flex; align-items:center; gap:8px; margin:0 0 22px; padding:8px 15px; border-radius:999px; font-family:"Sora",sans-serif; font-weight:600; font-size:.82rem; color:#bff0de; background:rgba(95,208,176,.13); border:1px solid rgba(95,208,176,.32); }
 
 .hero-chip{
   position:absolute; left:-22px; bottom:-24px;
