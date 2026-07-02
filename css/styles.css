@@ -448,45 +448,29 @@ section[id], div[id] { scroll-margin-top: 92px; }
 @media (max-width: 700px) { .bullet-grid { grid-template-columns: 1fr; } }
 
 /* ===========================================================
-   Designed hero visual (dual-pricing terminal) - replaces stock photo
+   Hero visual: real Dejavoo device photo + savings chip
    =========================================================== */
-.hero-terminal{
-  position:relative; overflow:hidden;
-  background:linear-gradient(158deg,#12385f 0%, var(--navy-900) 78%);
-  border-radius:26px; padding:34px 34px 48px; color:#fff;
-  box-shadow:0 34px 70px -24px rgba(10,31,56,.6), 0 10px 26px rgba(10,31,56,.24);
+.hero-device-photo{ position:relative; display:flex; justify-content:center; }
+.hero-device-photo img{
+  width:100%; max-width:500px; height:auto; display:block;
+  filter: drop-shadow(0 26px 44px rgba(10,31,56,.26));
 }
-.hero-terminal::before{
-  content:""; position:absolute; inset:0; pointer-events:none;
-  background:radial-gradient(460px 240px at 88% -12%, rgba(95,208,176,.20), transparent 62%);
-}
-.hero-terminal::after{
-  content:""; position:absolute; top:16px; left:50%; transform:translateX(-50%);
-  width:46px; height:4px; border-radius:99px; background:rgba(255,255,255,.14);
-}
-.hero-terminal > *{ position:relative; }
-.hero-terminal-top{ display:flex; align-items:center; gap:11px; margin:6px 0 20px; }
-.hero-terminal-top span{ font-family:"Sora",sans-serif; font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:#84a7c2; }
-.hero-terminal-label{ font-size:.92rem; color:#9fb1c7; }
-.hero-terminal-old{ font-family:"Sora",sans-serif; font-size:1.5rem; font-weight:600; color:#5f7ea0; text-decoration:line-through; text-decoration-color:rgba(255,255,255,.28); margin-top:5px; }
-.hero-terminal-old span{ font-size:.85rem; }
-.hero-terminal-new{ font-family:"Sora",sans-serif; font-size:4.8rem; font-weight:700; line-height:.92; color:#5fd0b0; margin-top:2px; letter-spacing:-.02em; }
-.hero-terminal-new span{ font-size:1.35rem; font-weight:600; color:#8fdcc6; letter-spacing:0; }
-.hero-terminal-pill{ display:inline-flex; align-items:center; gap:8px; margin:0 0 22px; padding:8px 15px; border-radius:999px; font-family:"Sora",sans-serif; font-weight:600; font-size:.82rem; color:#bff0de; background:rgba(95,208,176,.13); border:1px solid rgba(95,208,176,.32); }
-
 .hero-chip{
-  position:absolute; left:-22px; bottom:-24px;
+  position:absolute; left:2px; bottom:6px;
   background:#fff; border:1px solid var(--line); border-radius:16px;
-  padding:15px 20px; box-shadow:var(--shadow-lg);
+  padding:16px 20px; box-shadow:var(--shadow-lg);
 }
-.hero-chip-num{ font-family:"Sora",sans-serif; font-weight:700; font-size:1.9rem; color:var(--navy-900); line-height:1; }
-.hero-chip-label{ font-size:.8rem; color:var(--muted); margin-top:3px; }
+.hero-chip-tag{
+  display:inline-flex; align-items:center; gap:7px;
+  font-family:"Sora",sans-serif; font-weight:600; font-size:.72rem;
+  letter-spacing:.02em; color:var(--green-600); background:var(--green-100);
+  padding:5px 11px; border-radius:999px; margin-bottom:11px;
+}
+.hero-chip-tag::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--green-500); }
+.hero-chip-big{ font-family:"Sora",sans-serif; font-weight:700; font-size:2.4rem; color:var(--navy-900); line-height:1; }
+.hero-chip-big span{ display:block; font-size:.82rem; font-weight:500; color:var(--muted); margin-top:5px; }
 
 @media (max-width:900px){
-  .hero-chip{ position:static; margin-top:16px; left:0; display:inline-block; }
-  .hero-terminal-new{ font-size:4rem; }
-}
-@media (max-width:600px){
-  .hero-terminal{ padding:30px 26px 26px; }
-  .hero-terminal-new{ font-size:3.4rem; }
+  .hero-chip{ position:static; margin:18px auto 0; left:0; display:inline-block; }
+  .hero-device-photo{ max-width:440px; margin:0 auto; }
 }
