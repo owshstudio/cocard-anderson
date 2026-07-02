@@ -32,7 +32,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="preload" as="image" href="assets/photos/hero-pos.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
@@ -105,11 +104,24 @@
         </div>
       </div>
       <div class="hero-visual">
-        <img decoding="async" fetchpriority="high" class="hero-photo" src="assets/photos/hero-pos.jpg" alt="A customer tapping a Visa card on a contactless payment terminal">
-        <div class="float-card">
-          <span class="tag">● Dual pricing applied</span>
-          <div class="float-num">$0<span>per month in processing fees</span></div>
-          <div class="float-sub">Down from $3,200/mo. The full processing bill, back on your bottom line.</div>
+        <div class="hero-terminal" role="img" aria-label="Monthly card processing fees reduced from $3,200 to $0 with dual pricing">
+          <div class="hero-terminal-top">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#5fd0b0" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+              <path d="M8.5 8.5a5 5 0 0 1 0 7"/><path d="M11.5 6a9 9 0 0 1 0 12"/><path d="M14.5 3.5a13 13 0 0 1 0 17"/>
+            </svg>
+            <span>Tap &middot; Insert &middot; Swipe</span>
+          </div>
+          <div class="hero-terminal-label">Card processing fees</div>
+          <div class="hero-terminal-old">$3,200<span>/mo</span></div>
+          <div class="hero-terminal-new">$0<span>/mo</span></div>
+          <div class="hero-terminal-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
+            Dual pricing applied
+          </div>
+        </div>
+        <div class="hero-chip">
+          <div class="hero-chip-num">100%</div>
+          <div class="hero-chip-label">of every sale, kept</div>
         </div>
       </div>
     </div>
