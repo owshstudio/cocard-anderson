@@ -309,7 +309,7 @@
         </div>
       </div>
 
-      <form class="quote-form" onsubmit="event.preventDefault(); this.querySelector('.form-success').style.display='block'; this.querySelector('button').textContent='Thank you, we\'ll be in touch';">
+      <form class="quote-form" id="quoteForm" action="/api/contact" method="post">
         <div class="form-row">
           <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" required></div>
           <div class="field"><label for="biz">Business name</label><input id="biz" name="business" type="text" required></div>
@@ -328,9 +328,10 @@
             <option>Something else</option>
           </select>
         </div>
-        <div class="field"><label for="msg">Anything else?</label><textarea id="msg" rows="3"></textarea></div>
+        <div class="field"><label for="msg">Anything else?</label><textarea id="msg" name="message" rows="3"></textarea></div>
         <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">Send my request</button>
         <p class="form-success" style="display:none; color:var(--green-600); font-weight:600; margin:14px 0 0; text-align:center;">Got it. A real person will reach out shortly.</p>
+        <p class="form-error" style="display:none; color:#b3261e; font-weight:600; margin:14px 0 0; text-align:center;">Something went wrong. Please call 315-414-0107 or email service@cocardanderson.com.</p>
       </form>
     </div>
   </section>
@@ -386,6 +387,32 @@
         var open=m.classList.toggle('open'); t.classList.toggle('is-open', open); t.setAttribute('aria-expanded', open);
       });
       m.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+    })();
+
+    // Contact form -> Resend serverless function
+    (function(){
+      var f=document.getElementById('quoteForm');
+      if(!f) return;
+      var btn=f.querySelector('button[type="submit"]');
+      var ok=f.querySelector('.form-success'), err=f.querySelector('.form-error');
+      f.addEventListener('submit', function(e){
+        e.preventDefault();
+        ok.style.display='none'; err.style.display='none';
+        var original=btn.textContent; btn.disabled=true; btn.textContent='Sending...';
+        var data={};
+        new FormData(f).forEach(function(v,k){ data[k]=v; });
+        fetch(f.action, {
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body:JSON.stringify(data)
+        }).then(function(r){ return r.ok ? r.json().catch(function(){return {};}) : Promise.reject(r); })
+          .then(function(){
+            f.reset(); ok.style.display='block'; btn.textContent='Thank you, we\'ll be in touch';
+          })
+          .catch(function(){
+            err.style.display='block'; btn.disabled=false; btn.textContent=original;
+          });
+      });
     })();
   </script>
 <script type="application/ld+json">
