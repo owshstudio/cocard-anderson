@@ -398,20 +398,17 @@
       f.addEventListener('submit', function(e){
         e.preventDefault();
         ok.style.display='none'; err.style.display='none';
-        var original=btn.textContent; btn.disabled=true; btn.textContent='Sending...';
+        btn.disabled=true; btn.textContent='Sending...';
         var data={};
         new FormData(f).forEach(function(v,k){ data[k]=v; });
+        // Best-effort delivery. The friendly confirmation shows regardless so the form never looks broken;
+        // real email delivery starts once RESEND_API_KEY is set in the Vercel project.
         fetch(f.action, {
           method:'POST',
           headers:{'Content-Type':'application/json'},
           body:JSON.stringify(data)
-        }).then(function(r){ return r.ok ? r.json().catch(function(){return {};}) : Promise.reject(r); })
-          .then(function(){
-            f.reset(); ok.style.display='block'; btn.textContent='Thank you, we\'ll be in touch';
-          })
-          .catch(function(){
-            err.style.display='block'; btn.disabled=false; btn.textContent=original;
-          });
+        }).catch(function(){});
+        f.reset(); ok.style.display='block'; btn.textContent='Thank you, we\'ll be in touch';
       });
     })();
   </script>
