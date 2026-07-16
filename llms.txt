@@ -1,0 +1,28 @@
+# CoCard Anderson
+
+> Honest merchant services and point-of-sale (POS) systems for Northeast businesses since 2002. Lower your card processing fees with the Dual Pricing program, backed by local support and a real person who answers the phone.
+
+CoCard Anderson (CCA) is a full-line merchant services and POS provider with offices in Syracuse, NY and Bennington, VT, serving businesses across New York, Vermont, and Western Massachusetts. CoCard is a registered ISO of Wells Fargo Bank, N.A. and Fifth Third Bank, N.A. The lead offering is Dual Pricing, which lets merchants recover up to 100% of their card processing fees in a way that is compliant with Visa and Mastercard rules.
+
+## Services
+- [Dual Pricing](https://cocard-anderson.vercel.app/dual-pricing): Recover up to 100% of card processing fees with a cash and card price difference, the same model gas stations use. Compliant with card-network rules and state law.
+- [B2BX Level 3 Processing](https://cocard-anderson.vercel.app/b2bx): A virtual terminal that passes Level 3 data to cut B2B and B2G card acceptance costs by roughly 25 to 30 percent.
+- [Breach Insurance](https://cocard-anderson.vercel.app/breach-insurance): Protection against the cost of a data breach for businesses that accept cards.
+- [Chargeback Reimbursement](https://cocard-anderson.vercel.app/chargeback-reimbursement): A managed program that keeps chargeback disputes from eating into revenue.
+
+## POS & Payments
+- [POS Systems](https://cocard-anderson.vercel.app/pos-systems): EdgeServ, Genius by Global Payments, Bodega AI, and Clover.
+- [C-Store & Liquor Store](https://cocard-anderson.vercel.app/c-store): Bodega AI, an AI-powered POS built for convenience stores, liquor stores, and smoke shops.
+- [Card Terminals](https://cocard-anderson.vercel.app/terminals): Dejavoo Z Series, QD Series, and P Series terminals.
+- [Virtual Terminals & Gateways](https://cocard-anderson.vercel.app/gateways): iPOSpays, Authorize.net, NMI, SwipeSimple, PayTrace, eProcessingNetwork, and Hyfin, paired with a CoCard merchant account.
+- [Mobile Payments](https://cocard-anderson.vercel.app/mobile-payments): Accept payments on a phone or a mobile terminal, with tap, insert, and swipe.
+
+## Company
+- [About](https://cocard-anderson.vercel.app/about): Who CoCard Anderson is and how they support local businesses.
+- [Privacy Policy](https://cocard-anderson.vercel.app/privacy)
+- [Terms of Use](https://cocard-anderson.vercel.app/terms)
+
+## Contact
+- Phone: 315-414-0107
+- Syracuse, NY: 5858 E Molloy Road, Suite 151, Syracuse, NY 13211
+- Bennington, VT: 59 Harwood Hill Road, Bennington, VT 05201
