@@ -1,12 +1,12 @@
 // Vercel serverless function: receives the contact form and emails the lead via Resend.
 // Requires env var RESEND_API_KEY (set in the Vercel project).
-// Leads go to noahowsh@gmail.com from Resend's shared sender for now. On real launch:
-// verify cocardanderson.com in Resend, then switch `from` to a cocardanderson.com sender
-// (and optionally `to` service@cocardanderson.com).
+// Sends from the verified Strelva domain (forms@mail.strelva.com) per the house convention
+// (custom-repo-starter SCAFFOLD_FORM_FROM), reply_to = the submitter so replies reach the lead.
+// Leads go to noahowsh@gmail.com for now (switch `to` to service@cocardanderson.com at launch if desired).
 // Email design matches the Strelva house lead-notification template (custom-repo-starter/scaffold-forms.ts).
 
 const LEAD_TO = 'noahowsh@gmail.com';
-const FROM = 'CoCard Anderson Website <onboarding@resend.dev>';
+const FROM = 'CoCard Anderson <forms@mail.strelva.com>';
 
 // Strelva house palette (clean + neutral: this is an internal notice, not a customer brand email)
 const C = {
